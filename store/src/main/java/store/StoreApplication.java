@@ -1,4 +1,4 @@
-package com.superdev.store;
+package store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

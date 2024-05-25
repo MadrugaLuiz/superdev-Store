@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac44cb7-00d0-40eb-ba17-acb2fa70dd71" name="Changes" comment="" />
+    <list default="true" id="fac44cb7-00d0-40eb-ba17-acb2fa70dd71" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/store/controller/CategoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/StoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/StoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/controller/CategoriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/controller/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/controller/Teste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/model/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/repository/CategoriaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/superdev/store/service/CategoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/store/service/CategoriaService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2gqEFozA668PnRbxt69Kq6TPq87" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,12 +35,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/74468/Desktop/superdev-Store",
+    "last_opened_file_path": "C:/Users/User/OneDrive/Área de Trabalho/Curso Super Dev/JavaWeb/superdev-Store",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\OneDrive\Área de Trabalho\Curso Super Dev\JavaWeb\superdev-Store\store\src\main\java" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
