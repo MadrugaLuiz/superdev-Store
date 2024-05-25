@@ -13,7 +13,7 @@ public class ProdutoService {
     @Autowired
     private ProdutoRepository produtoRepository;
 
-    public List<Produto> findAll(){
+    public List<Produto> findAll() {
         return produtoRepository.findAll();
     }
 
@@ -21,16 +21,37 @@ public class ProdutoService {
 
         return produtoRepository.findById(id).orElse(null);
     }
+
     public Produto save(Produto produto) {
 
         return produtoRepository.save(produto);
     }
 
-    public void delete (Produto produto){
+    public void delete(Produto produto) {
 
         produtoRepository.delete(produto);
     }
 
+    public boolean comprar(int id, int quantidade) {
+        Produto produtoEncontrado = findById(id);
+        if (findById(id) == null) {
+            return false;
+        }
+        produtoEncontrado.setQuantidade(produtoEncontrado.getQuantidade() + quantidade);
+        save(produtoEncontrado);
+        return true;
 
+    }
+
+    public boolean vender(int id, int quantidade) {
+
+        Produto produtoEncontrado = findById(id);
+        if (findById(id) == null || produtoEncontrado.getQuantidade() < quantidade) {
+            return false;
+        }
+        produtoEncontrado.setQuantidade(produtoEncontrado.getQuantidade() - quantidade);
+        save(produtoEncontrado);
+        return true;
+    }
 
 }

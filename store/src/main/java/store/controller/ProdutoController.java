@@ -61,5 +61,24 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoEncontrado);
     }
 
+    @PatchMapping("/comprar/{id}")
+    public ResponseEntity<Produto> comprar(@RequestBody int quantidade, @PathVariable int id) {
+
+        if (produtoService.comprar(id, quantidade)) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
+
+    }
+
+    @PatchMapping("/vender/{id}")
+    public ResponseEntity<Produto> vender(@RequestBody int quantidade, @PathVariable int id) {
+
+        if (produtoService.vender(id, quantidade)) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
+
+    }
 
 }
