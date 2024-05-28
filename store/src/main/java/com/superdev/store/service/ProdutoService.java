@@ -1,12 +1,15 @@
-package store.service;
+package com.superdev.store.service;
 
 
+import com.superdev.store.model.Produto;
+import com.superdev.store.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import store.model.Produto;
-import store.repository.ProdutoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class ProdutoService {
 
 

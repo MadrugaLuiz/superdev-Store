@@ -1,29 +1,28 @@
-package store.model;
+package com.superdev.store.model;
 
-import jakarta.annotation.Nullable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.NonNull;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
+@Data
+@Entity
 @AllArgsConstructor
 @Builder
-@Entity
-public class Categoria {
+public class Produto {
+
+    //Banco de dados chamado produto será criado por chamar o @Entity
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    @NonNull
+    private int id;
     private String nome;
-    @NonNull
-    private boolean status;
-    @Nullable
-    private Integer qualidade;
+    private Double preco;
+    private int quantidade;
 }

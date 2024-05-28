@@ -1,10 +1,10 @@
-package store.controller;
+package com.superdev.store.controller;
 
 
-import store.model.Categoria;
+import com.superdev.store.model.Categoria;
+import com.superdev.store.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import store.service.CategoriaService;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

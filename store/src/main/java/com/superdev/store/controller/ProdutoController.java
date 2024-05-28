@@ -1,11 +1,11 @@
-package store.controller;
+package com.superdev.store.controller;
 
 
+import com.superdev.store.model.Produto;
+import com.superdev.store.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import store.model.Produto;
-import store.service.ProdutoService;
 
 import java.util.List;
 

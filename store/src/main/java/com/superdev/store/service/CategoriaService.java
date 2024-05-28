@@ -1,9 +1,9 @@
-package store.service;
+package com.superdev.store.service;
 
-import store.model.Categoria;
+import com.superdev.store.repository.CategoriaRepository;
+import com.superdev.store.model.Categoria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import store.repository.CategoriaRepository;
 
 import java.util.List;
 
