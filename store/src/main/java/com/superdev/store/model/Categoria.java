@@ -1,15 +1,15 @@
 package com.superdev.store.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.annotation.Nullable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NonNull;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -26,4 +26,8 @@ public class Categoria {
     private boolean status;
     @Nullable
     private Integer qualidade;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "categoria")
+    private List<Produto> produtos;
 }
