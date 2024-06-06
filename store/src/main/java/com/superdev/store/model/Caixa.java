@@ -1,6 +1,6 @@
 package com.superdev.store.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,9 +16,18 @@ import java.util.List;
 @Builder
 public class Caixa {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+
     private boolean status;
-    private List<Pedido> pedidos;
+
+    @OneToMany(mappedBy = "caixa")
+    private List<Pedido> pedidosCaixa;
+
+
     private Date dataFechamento;
     private Double valorTotal;
 }

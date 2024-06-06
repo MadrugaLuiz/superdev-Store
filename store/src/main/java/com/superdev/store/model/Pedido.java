@@ -1,6 +1,6 @@
 package com.superdev.store.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,10 +17,30 @@ import java.util.List;
 @Builder
 public class Pedido {
 
+
+    @Id
+    @GeneratedValue
     private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
-    private List<Produto> produtos;
+
+    @OneToMany
+    @JoinTable(
+
+            name = "pedido_produto",
+            joinColumns = @JoinColumn(name = "pedido_id"),
+            inverseJoinColumns = @JoinColumn(name = "produto_id")
+    )
+    private List<Produto> produtosPedido;
+
+
     private Date dataTransacao;
     private Double valorTotal;
+
+    @ManyToOne
+    @JoinColumn(name = "caixa_id")
+    private Caixa caixa;
 
 }
