@@ -21,13 +21,13 @@ public class Caixa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    private Date dataFechamento;
+    private Double valorTotal;
 
     private boolean status;
 
     @OneToMany(mappedBy = "caixa")
     private List<Pedido> pedidosCaixa;
 
-
-    private Date dataFechamento;
-    private Double valorTotal;
 }
+

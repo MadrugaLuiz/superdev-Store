@@ -23,6 +23,7 @@ public class Cliente {
     @Id
     @GeneratedValue
     private int id;
+
     private String nome;
     private int idade;
 

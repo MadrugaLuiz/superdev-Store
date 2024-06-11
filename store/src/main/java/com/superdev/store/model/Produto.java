@@ -2,10 +2,7 @@ package com.superdev.store.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -27,6 +24,7 @@ public class Produto {
     private Double preco;
     private int quantidade;
 
+    @NonNull
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;

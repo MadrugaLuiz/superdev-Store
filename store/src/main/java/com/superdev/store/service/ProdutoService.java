@@ -23,8 +23,10 @@ public class ProdutoService {
     public Produto findById(int id) {
 
         //return produtoRepository.findById(id).orElse(null);
-        Produto produtoEncontrado = produtoRepository.findById(id).orElse(null);
-        produtoEncontrado.setCategoria();
+        //  Produto produtoEncontrado = produtoRepository.findById(id).orElse(null);
+        //   produtoEncontrado.setCategoria();
+
+        return produtoRepository.findById(id).orElse(null);
     }
 
     public Produto save(Produto produto) {
@@ -38,25 +40,37 @@ public class ProdutoService {
     }
 
     public boolean comprar(int id, int quantidade) {
+
+        // Validando se o produto existe no banco de dados
         Produto produtoEncontrado = findById(id);
         if (findById(id) == null) {
             return false;
         }
+
+        // Adicionar na quantidade do produto o valor que veio por parâmetro
         produtoEncontrado.setQuantidade(produtoEncontrado.getQuantidade() + quantidade);
+        // Atualiza as informações no banco de dados
         save(produtoEncontrado);
         return true;
 
     }
 
     public boolean vender(int id, int quantidade) {
-
+        // Validando se o produto existe no banco de dados
         Produto produtoEncontrado = findById(id);
         if (findById(id) == null || produtoEncontrado.getQuantidade() < quantidade) {
             return false;
         }
+        // Remover da quantidade do produto o valor que veio por parâmetro
         produtoEncontrado.setQuantidade(produtoEncontrado.getQuantidade() - quantidade);
+        // Atualiza as informações no banco de dados
         save(produtoEncontrado);
         return true;
+    }
+
+    public List<Produto> buscarProdutoPorNome(String nome) {
+
+        return produtoRepository.buscarProdutoPorNome(nome);
     }
 
 }

@@ -34,6 +34,12 @@ public class ProdutoController {
 
     }
 
+    @GetMapping("/nome/{nome}")
+    public List<Produto> buscarProdutoPorNome(@PathVariable String nome) {
+        return produtoService.buscarProdutoPorNome(nome);
+
+    }
+
     @PostMapping
     public ResponseEntity<Produto> adicionar(@RequestBody Produto produto) {
         return ResponseEntity.ok(produtoService.save(produto));

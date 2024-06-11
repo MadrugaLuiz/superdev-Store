@@ -26,6 +26,10 @@ public class Pedido {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
+
+    private Date dataTransacao;
+    private Double valorTotal;
+
     @OneToMany
     @JoinTable(
 
@@ -36,8 +40,7 @@ public class Pedido {
     private List<Produto> produtosPedido;
 
 
-    private Date dataTransacao;
-    private Double valorTotal;
+
 
     @ManyToOne
     @JoinColumn(name = "caixa_id")
