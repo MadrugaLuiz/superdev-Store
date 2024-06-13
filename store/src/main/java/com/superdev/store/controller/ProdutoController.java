@@ -17,7 +17,7 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
 
-    @GetMapping
+    @GetMapping("/")
     public List<Produto> buscarTodos() {
 
         return produtoService.findAll();
