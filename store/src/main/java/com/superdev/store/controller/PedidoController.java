@@ -1,6 +1,5 @@
 package com.superdev.store.controller;
 
-
 import com.superdev.store.model.Pedido;
 import com.superdev.store.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pedido")
 public class PedidoController {
-
+    
     @Autowired
     private PedidoService pedidoService;
 
@@ -53,4 +52,5 @@ public class PedidoController {
         pedidoService.excluir(pedidoEncontrada);
         return ResponseEntity.ok(pedidoEncontrada);
     }
+    
 }

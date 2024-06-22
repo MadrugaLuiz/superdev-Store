@@ -9,38 +9,31 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 import java.util.List;
 
-
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
 public class Pedido {
 
-
     @Id
-    @GeneratedValue
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private Date dataTransacao;
+    private Double valorTotal;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-
-    private Date dataTransacao;
-    private Double valorTotal;
-
-    @OneToMany
+    @ManyToMany
     @JoinTable(
-
             name = "pedido_produto",
             joinColumns = @JoinColumn(name = "pedido_id"),
             inverseJoinColumns = @JoinColumn(name = "produto_id")
     )
     private List<Produto> produtosPedido;
-
-
-
 
     @ManyToOne
     @JoinColumn(name = "caixa_id")

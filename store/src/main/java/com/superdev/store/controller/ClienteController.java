@@ -1,6 +1,5 @@
 package com.superdev.store.controller;
 
-
 import com.superdev.store.model.Cliente;
 import com.superdev.store.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
-
-
+    
     @Autowired
     private ClienteService clienteService;
 
@@ -54,4 +52,5 @@ public class ClienteController {
         clienteService.excluir(clienteEncontrada);
         return ResponseEntity.ok(clienteEncontrada);
     }
+    
 }

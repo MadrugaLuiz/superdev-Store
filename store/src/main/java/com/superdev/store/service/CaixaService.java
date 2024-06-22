@@ -5,15 +5,14 @@ import com.superdev.store.repository.CaixaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import java.util.List;
 
 @Service
 public class CaixaService {
-
+    
     @Autowired
     private CaixaRepository caixaRepository;
-
+    
     public List<Caixa> buscarTodos() {
         return caixaRepository.findAll();
     }
@@ -29,6 +28,5 @@ public class CaixaService {
     public void excluir(Caixa caixa) {
         caixaRepository.delete(caixa);
     }
-
-
+    
 }

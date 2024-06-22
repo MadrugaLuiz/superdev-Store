@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/caixa")
 public class CaixaController {
-
+    
     @Autowired
-    private  CaixaService caixaService;
+    private CaixaService caixaService;
 
     @GetMapping
     public List<Caixa> buscarTodos() {
@@ -52,4 +52,5 @@ public class CaixaController {
         caixaService.excluir(caixaEncontrada);
         return ResponseEntity.ok(caixaEncontrada);
     }
+    
 }

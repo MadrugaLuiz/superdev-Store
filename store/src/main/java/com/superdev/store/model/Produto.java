@@ -1,24 +1,24 @@
 package com.superdev.store.model;
 
-
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.lang.NonNull;
 
 import java.util.List;
 
-@NoArgsConstructor
-@Data
 @Entity
+@Data
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Produto {
 
-    //Banco de dados chamado produto será criado por chamar o @Entity
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
+    private Integer id;
 
     private String nome;
     private Double preco;
@@ -31,6 +31,5 @@ public class Produto {
 
     @ManyToMany(mappedBy = "produtosPedido")
     private List<Pedido> pedidosProduto;
-
 
 }

@@ -9,10 +9,10 @@ import java.util.List;
 
 @Service
 public class ClienteService {
-
+    
     @Autowired
     private ClienteRepository clienteRepository;
-
+    
     public List<Cliente> buscarTodos() {
         return clienteRepository.findAll();
     }
@@ -28,4 +28,5 @@ public class ClienteService {
     public void excluir(Cliente cliente) {
         clienteRepository.delete(cliente);
     }
+    
 }

@@ -9,25 +9,22 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 import java.util.List;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Builder
 public class Caixa {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
+    private Boolean status;
     private Date dataFechamento;
     private Double valorTotal;
 
-    private boolean status;
-
     @OneToMany(mappedBy = "caixa")
-    private List<Pedido> pedidosCaixa;
+    private List<Pedido> pedidos;
 
 }
-

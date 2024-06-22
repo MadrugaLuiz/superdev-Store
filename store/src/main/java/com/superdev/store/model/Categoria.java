@@ -11,23 +11,28 @@ import lombok.NonNull;
 
 import java.util.List;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
 public class Categoria {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     @NonNull
     private String nome;
+
     @NonNull
     private boolean status;
+
     @Nullable
-    private Integer qualidade;
+    private String qualidade;
 
     @JsonIgnore
     @OneToMany(mappedBy = "categoria")
     private List<Produto> produtosCategoria;
+
 }
